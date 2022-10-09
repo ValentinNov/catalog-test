@@ -3,6 +3,7 @@ $(function () {
 
     $('.catalog__filter-btn').on('click', function () {
         $('.col-filters').slideToggle();
+        $('.col-filters').toggleClass('col-filters--active');
     })
 
 

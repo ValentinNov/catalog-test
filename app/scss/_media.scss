@@ -43,6 +43,10 @@
     .accordion{
         max-width: 100%;
     }
+    .col-filters--active{
+        position: fixed;
+        top: 5px;
+    }
 }
 
 @media (max-width: 670px){
