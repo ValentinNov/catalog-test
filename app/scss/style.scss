@@ -1,0 +1,627 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+
+.header{
+    border-bottom: 2px solid #E0E3E3;
+    &__center{
+        border-bottom: 2px solid #E0E3E3;
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &__box{
+        max-width: 1030px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 2px;
+        padding-right: 0;
+        margin-left: 0;
+        flex-wrap: nowrap;
+    }    
+}
+
+.header-top{
+    padding: 5px;
+    color: #0F1A34;
+    background: #CBDCFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__imgbox{
+        display: flex;
+    }
+    &__advertising{
+        font-size: 16px;
+    }
+}
+
+.header-nav{  
+    max-width: 280px;
+    padding-left: 15px;    
+    &__buttons{
+        justify-content: end;
+        flex-wrap: nowrap;
+        gap: 10px;
+        border-bottom: none;
+        align-items: center;
+        font-size: 12px;
+        color: $title;        
+    }
+    &__buttons-dropdown{
+        font-size: 12px;
+        color: $title; 
+    }
+    &__btn{
+        position: relative;
+        span{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: $title;
+            background: #EFF1F1;
+            border: 2.4px solid #FFFFFF;
+            border-radius: 13px;
+            width: 19px;
+            height: 19px;
+            top: 0;
+            right: 0;
+        }        
+    }
+    &__btn:hover{
+        span{
+            color: #fff;
+            background: #FF5449;
+            border: 2.4px solid #FFFFFF;
+        }
+    }
+    &__hart{
+        span{
+            top: -3px;
+        }
+    }    
+    .dropdown-toggle{
+        border: none;
+        color: $title;
+    }
+    .nav-link__leng::before {
+        position: absolute;
+        content: '';
+        background-color: $title;
+        width: 25px;
+        height: 1px;
+        bottom: 8px;
+    }
+    .dropdown-toggle::after {
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+        background-image: url(../images/icons/arrows-smal.svg);
+        width: 11px;
+        height: 6px;
+        transform: translateY(2px);
+    }
+    .nav-link{
+        padding: 0.5rem;
+    }
+    .dropdown-menu {
+        min-width: 5rem;
+    }
+    .nav-item__user .nav-link{
+        width: 50px !important;
+    }
+    .nav-item__user .dropdown-menu {
+        min-width: 8rem;
+    }
+    .nav-item__user-img{
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+}
+
+.logo-link{
+    padding: 0;
+    width: 150px;
+}
+
+.logo{
+    width: 150px;
+}
+
+.form{
+    padding: 0;
+    display: flex; 
+    justify-content: end;
+    width: 80%;
+    position: relative; 
+    &::before{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/icons/search.svg);
+        left: 35px;
+        top: 11px;
+    } 
+    &__input{
+        width: 100%;
+        font-size: 12px;
+        color: #5C5F60;
+        padding: 11px 3px 11px 52px;
+        color: #5C5F60;
+        border: 1.6px solid #E0E3E3;
+        margin-left: 25px;
+    }
+    &__btn{  
+        font-size: 12px;      
+        padding: 10px 20px;
+        margin-left: 16px;
+        max-width: 129px;
+        width: 100%;
+        border: none;
+        color: #fff;
+    }
+}
+
+.header-bottom{
+    padding: 0; 
+    .navbar-nav{
+        gap: 13px;
+    }   
+    .nav-item > .nav-link{        
+        @extend %stolzl-500;
+        text-transform: uppercase;
+        text-align: center;
+        color: $title;
+    }
+    .nav-link:hover{
+        border-bottom: 1px solid $title;
+        padding-bottom: 7px;
+    }    
+    .navbar-toggler{
+        margin: 8px 0;
+        border: none;
+    }
+    
+}
+
+.breadcrumb-box{
+    padding: 32px 0 40px;  
+}
+.breadcrumb-item{
+    font-size: 12px;   
+}
+.breadcrumb-item a{
+    font-size: 12px;
+    color: $title;
+}
+
+.catalog{
+    &__title{
+       font-size: 28px;
+       margin-bottom: 32px; 
+       color: $title;
+    }
+    &__filter-btn{
+        display: none;
+    }
+}
+
+.catalog-box{
+    margin: 0;
+}
+
+.col-filters{
+    max-width: 312px;
+    width: 100%;
+}
+
+.col-products{
+    width: 75%;
+}
+
+.filter-topbox{
+    margin: 0;
+    .col-12{
+        padding: 0;
+    }
+}
+
+.filter-top{
+    padding-bottom: 24px;
+    color: #5C5F60;
+    @extend %stolzl-400;
+    &__title{    
+        font-size: 22px;        
+    }
+    &__text{
+        font-size: 12px;
+        margin-right: 12px;
+        position: relative;
+    }
+    &__sort{        
+        position: relative;
+        display: flex;
+        width: 275px;
+        height: 34px;
+        border-radius: 17px;
+        overflow: hidden;
+    }
+    &__sort::after{
+        content: '\276f';
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        height: 34px;
+        width: 30px;
+        padding: 12px;
+        transform: rotate(90deg);
+        transition: .25s all ease;
+        pointer-events: none;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    } 
+    &__sort::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 30px;
+        height: 34px;
+        width: 2px;        
+        background-color: #fFF;        
+    }    
+    &__select{
+        font-size: 12px;
+        padding: 8px 8px 8px 15px;
+        background: #EFF1F1;
+        border: none;
+        appearance: none;
+        outline: 0;
+        border: 0;
+        box-shadow: none;
+        flex: 1;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: #EFF1F1;
+        background-image: none;
+        cursor: pointer;
+    }    
+    &__select::-ms-expand {
+        display: none;
+    }
+}
+
+.accordion{
+    max-width: 312px;
+    width: 100%;
+}
+.accordion-button{
+    border: none;
+    background-color: $default;
+    color: #444748;
+}
+.accordion-button:not(.collapsed) {
+    color: #444748;
+    background-color: $default;
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../images/icons/arrows-big.svg);
+    transform: rotate(0deg);
+}
+
+.accordion-item{
+    margin-bottom: 6px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 0;
+}
+
+.form-item{
+    padding-top: 15px;
+    color: #444748;
+    .form-check{
+        margin-bottom: 10px;
+    }
+    .form-check-input:checked {
+        width: 17px;
+        height: 17px;
+        background-color: $title;
+        border-color: $title;
+    }
+    .form-check-label{
+        padding-left: 16px;
+    }    
+    .num{
+        position: relative;
+        margin: 0 0 0 auto;
+    }
+    .num::after{
+        position: absolute;
+        content: ')';
+        right: -6px;
+    }
+    .num::before{
+        position: absolute;
+        content: '(';
+        left: -6px;        
+    }
+    .accordion-body{
+        padding: 20px 10px 10px 10px;
+    }
+}
+
+// filter price
+    .filter-price{
+  &__from-to{
+        display: flex;
+        justify-content: space-between;
+        max-width: 264px;
+        width: 100%;
+        align-items: center;
+        font-size: 14px;
+        line-height: 33px;
+        color: $title;;  
+  }
+  &__from,
+  &__to{
+        width: 120px;
+        border-bottom: 1px solid $accent;  
+        padding-right: 25px;
+        position: relative;    
+  }
+  &__to{
+      margin-left: 25px;
+  }
+  &__from{
+        &::before{
+        position: absolute;
+        content: "Від";
+        font-size: 10px;
+        left: 0; 
+        top: -20px;
+        padding-bottom: 8px;
+        color: $accent;;
+    }
+  }
+  &__to{
+        &::after{
+        position: absolute;
+        content: "До";
+        font-size: 10px;
+        left: 0; 
+        top: -20px;
+        padding-bottom: 8px;
+        color: $accent;;
+    }
+  }
+}
+.irs--flat{
+    height: 30px;
+    margin-bottom: 25px;
+}
+.irs--flat .irs-line {
+    top: 6px;
+    height: 4px;
+    background-color: #C4C7C7;
+    border-radius: 0;
+}
+.irs--flat .irs-bar {
+    top: 6px;
+    height: 4px;
+    background-color: #8E9192;
+}
+.irs-from, 
+.irs-to,
+.irs-single{
+    display: none;
+}
+.irs--flat .irs-min,
+.irs--flat .irs-max{
+    display: none;
+}
+.irs--flat .irs-handle {
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: #5C5F60;
+}
+.irs--flat .irs-handle>i:first-child {
+    display: none;    
+} 
+//filter price end
+
+
+.cards-inner{
+    padding: 0;
+    //gap: 24px;
+    margin-bottom: 40px;
+}
+
+//card
+.card{
+    color: $title;
+    height: 467px;
+    width: 19.5rem;
+    padding: 24px;
+    margin-bottom: 24px;
+    &__img-box{
+        padding: 21px 28px;
+        position: relative;
+    } 
+    &__img{
+        max-width: 207px;
+        width: 100%;
+        height: 263px;
+    }
+    &__button-heart{
+        position: absolute;
+        border: none;
+        top: 0;
+        right: 0;
+    }
+    &__button-heart::before{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/products/heart.svg);
+        background-repeat: no-repeat;
+        top: 0;
+        right: 0;
+    }
+    &__product-top::before{
+        position: absolute;
+        content: '';
+        width: 38px;
+        height: 23px;
+        background-image: url(../images/products/top.svg);
+        background-repeat: no-repeat;
+        bottom: 0;
+        left: 0;
+    }
+    &__product-organic::after{
+        position: absolute;
+        content: '';
+        width: 56px;
+        height: 23px;
+        background-image: url(../images/products/organic.svg);
+        left: 0;
+        top: 2px;
+    }
+    &__body{
+       padding-top: 9px; 
+    }   
+    &__subtitle{
+        @extend %stolzl-500;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #5C5F60;
+        margin-bottom: 4px;
+    }
+    &__title{
+        margin-bottom: 24px;
+        font-size: 14px;
+        color: $title;
+    }
+    &__price-old{
+       font-size: 12px; 
+       text-decoration: line-through;
+       color: #747778;
+    }
+    &__price{
+        @extend %stolzl-500;
+    }
+    &__linkbox{
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &__adress{
+        font-size: 12px;
+        padding-left: 14px;
+        position: relative;        
+        color: $title;
+        margin-left: auto;
+    }
+    &__adress::before{
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 12px;
+        background-image: url(../images/icons/adress.svg);
+        left: 0;
+        top: 2px;
+    }    
+}
+
+//card end
+
+//pagination
+.nav-pagination{
+    padding: 20px 0 112px;
+    .pagination{        
+        margin-left: 15px;
+    }
+    .page-item + .page-item{
+        margin-left: 2px;
+    }
+    .page-item.active .page-link {
+        color: $title;
+        background-color: #fff;
+        border-color: $title;
+        padding: 10px 15px 7px;
+        transform: translateY(-3px);
+    }
+}
+.page-item{
+    padding: 0 4px;    
+}
+.page-link{
+    color: #5C5F60;
+    font-size: 12px;
+    border: 1.6px solid #C4C7C7;
+    border-radius: 100px;
+    padding: 6px 12px; 
+}
+.page-link:hover{
+    color: $title;
+}
+.page-item:first-child .page-link {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.page-item:last-child .page-link {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+//pagination end
+
+
+
+
+
+
+.footer{
+    background-color: #EFF1F1;
+}
+.footer-top{
+    padding: 62px 0 22px;
+    border-bottom: 2px solid #C4C7C7;
+    width: 99%;
+    &__item{
+        margin-bottom: 42px;
+    }
+    .nav-link{
+        color: $title;
+        padding-bottom: 4px;
+    }
+    .nav-link-img{
+        width: 175px;
+        height: 42px;
+    }
+}
+
+.footer-bottom{
+    padding: 38px 0;        
+    font-size: 12px;
+    color: $title;    
+}
+
+
+
+@import 'media';
